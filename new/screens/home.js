@@ -7,7 +7,7 @@ const Home = () => {
             <Title />
 
             <View>
-
+                <Image source={{uri:''}}></Image>
             </View>
 
             <TouchableOpacity>
