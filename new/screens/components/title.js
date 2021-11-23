@@ -1,13 +1,10 @@
 import React from 'react';
-import { SafeAreaView, View, VirtualizedList, StyleSheet, Text, StatusBar } from 'react-native';
+import { View, StyleSheet, Text } from 'react-native';
 
 const Title = () => {
   return (
-    <View style = {StyleSheet.container}>
-        <Text>Quizzler</Text>
-        
-
-
+    <View style={styles.container}>
+      <Text>Quizzler</Text>
     </View>
 
   )

@@ -1,17 +1,22 @@
 import React from 'react';
-import { SafeAreaView, View, VirtualizedList, StyleSheet, Text, StatusBar, TouchableOpacity } from 'react-native';
+import { Image,View, StyleSheet, Text, TouchableOpacity } from 'react-native';
+import Title from './components/title';
 
-const Home = () => {
+const Home = ({navigation}) => {
     return (
         <View style={StyleSheet.container}>
             <Title />
 
-            <View>
-                <Image source={{uri:''}}></Image>
+            <View style={styles.bannerContainer}>
+                <Image source={{ uri: 'https://image.shutterstock.com/image-vector/user-icon-vector-trendy-flat-600w-1720665448.jpg' }}
+                    style={styles.banner}
+                    resizeMode="contain"
+                />
+
             </View>
 
-            <TouchableOpacity>
-                <Text>Start</Text>
+            <TouchableOpacity onPress={()=>navigation.navigate("Quiz")}> 
+                <Text>Start</Text> 
             </TouchableOpacity>
 
         </View>
@@ -21,4 +26,13 @@ const Home = () => {
 
 export default Home;
 
-const styles = StyleSheet.create({});
+const styles = StyleSheet.create({
+    banner: {
+        height: 300,
+        width: 300,
+    },
+    bannerContainer:{
+        justifyContent:'center',
+        alignItems:'center'
+    }
+});

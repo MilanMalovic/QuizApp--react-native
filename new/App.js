@@ -1,23 +1,26 @@
 import React from 'react';
-import { SafeAreaView, View, VirtualizedList, StyleSheet, Text, StatusBar } from 'react-native';
 import { NavigationContainer } from '@react-navigation/native';
-import { createNativeStackNavigator } from '@react-navigation/native-stack';
+import { SafeAreaView, View, VirtualizedList, StyleSheet, Text, StatusBar } from 'react-native';
+import MyStack from './navigation';
 import Home from './screens/home';
+import Quiz from './screens/quiz';
+import Result from './screens/result';
+import 'react-native-gesture-handler';
 
 const App = () => {
   return (
-    <View style = {StyleSheet.container}>
-        <Home/>
-    </View>
+      <NavigationContainer>
+        <MyStack />
+      </NavigationContainer>
 
-  )
+  ) 
 };
 
 export default App;
 
 const styles = StyleSheet.create({
-  container:{
-    paddingTop:40,
-    paddingHorizontal:16
+  container: {
+    paddingTop: 40,
+    paddingHorizontal: 16
   }
 })
